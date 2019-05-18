@@ -1,15 +1,24 @@
-Camel Java Router Project
-=========================
+# BSBM-QUERIES library
 
-To build this project use
+A Java library to generated the SPARQL queries templates of [Berlin SPARQL Benchmark (BSBM)](http://wifo5-03.informatik.uni-mannheim.de/bizer/berlinsparqlbenchmark/) in a valid query based on specific dataset.
 
-    mvn install
+## System requirements
 
-To run this project from within Maven use
+* Oracle JDK 1.8.0_144
+* Apache Maven 3.5.0 or higher
 
-    mvn exec:java
+## Compile the BSBM-QUERIES
 
-For more help see the Apache Camel documentation
+Deploy with maven usign the configuration in pom.xml
 
-    http://camel.apache.org/
+```
+mvn clean install compile package
+```
 
+## Generate a valid query based on specific dataset
+
+Run bsbm-query Java library with query template and dataset as parameters to generate a SPARQL query valid
+
+```
+java -jar <query-template> <dataset>
+```
